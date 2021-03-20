@@ -10,8 +10,9 @@
 
     <Grid>
         <TextBlock Text="Safety.NET" TextAlignment="Left" FontFamily="serif" TextWrapping="Wrap" FontSize="100px" Margin="140,57,394,471"/>
-        <Button Content="Scan Now" Margin="158,338,0,0" Click="Scan_Click" VerticalAlignment="Top" RenderTransformOrigin="0.145,0.677"/>
-        <Image HorizontalAlignment="Left" Height="231" Margin="923,124,0,0" VerticalAlignment="Top" Width="174" Source="https://i.imgflip.com/3qb5l2.png"/>
-        <TextBlock Text="A security analysis and vulnerability detector utility using the .NET Framework" TextWrapping="Wrap" Margin="-700,200,10,10" FontSize="30px" Width="500"/>
+        <Image HorizontalAlignment="Left" Height="664" Margin="682,124,0,0" VerticalAlignment="Top" Width="471" Source="https://cdn.discordapp.com/attachments/819338657948762122/822951977763733545/logoC.png"/>
+        <TextBlock Text="A security analysis and vulnerability detector utility using the .NET Framework" TextWrapping="Wrap" Margin="-350,200,10,10" FontSize="30px" Width="500"/>
+        <Button Content="Start Scan" Margin="210,360,0,0" VerticalAlignment="Top" Click="Scan_Click"/>
+
     </Grid>
 </Page>
