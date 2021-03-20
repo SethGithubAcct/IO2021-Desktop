@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -29,6 +31,8 @@ namespace IO2021_Desktop
         }
         async void Scan_Click(object sender, RoutedEventArgs e)
         {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://www.haveibeenpwned.com");
             ContentDialog scanResult = new ContentDialog
             {
                 Title = "Scan Results",
