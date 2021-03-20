@@ -27,16 +27,6 @@ namespace IO2021_Desktop
         {
             this.InitializeComponent();
         }
-        async void HelloWorld_Click(object sender, RoutedEventArgs e)
-        {
-            ContentDialog helloWorld = new ContentDialog
-            {
-                Title = "It works!",
-                Content = "Hello world!",
-                CloseButtonText = "Exit"
-            };
-            ContentDialogResult result = await helloWorld.ShowAsync();
-        }
         async void Scan_Click(object sender, RoutedEventArgs e)
         {
             ContentDialog scanResult = new ContentDialog
