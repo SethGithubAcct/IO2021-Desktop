@@ -25,11 +25,17 @@ namespace IO2021_Desktop
         public MainPage()
         {
             this.InitializeComponent();
-            async void printHelloWorldButton_Click(object sender, RoutedEventArgs e)
+
+        }
+        async void HelloWorld_Click(object sender, RoutedEventArgs e)
+        {
+            ContentDialog helloWorld = new ContentDialog
             {
-                ContentDialog helloWorld = new ContentDialog
-                { Content = "Hello world!" };
-            }
+                Title = "It works!",
+                Content = "Hello world!",
+                CloseButtonText = "Exit"
+            };
+            ContentDialogResult result = await helloWorld.ShowAsync();
         }
     }
 }
