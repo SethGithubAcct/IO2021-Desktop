@@ -31,8 +31,12 @@ namespace IO2021_Desktop
         }
         async void Scan_Click(object sender, RoutedEventArgs e)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://www.haveibeenpwned.com");
+            CompromisedAccount APICall()
+            {
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri("https://www.haveibeenpwned.com/");
+                client.GetAsync();
+            }
             ContentDialog scanResult = new ContentDialog
             {
                 Title = "Scan Results",
@@ -41,5 +45,10 @@ namespace IO2021_Desktop
             };
             ContentDialogResult result = await scanResult.ShowAsync();
         }
+    }
+    public class CompromisedAccount
+    {
+        public string email;
+        public string breach;
     }
 }
