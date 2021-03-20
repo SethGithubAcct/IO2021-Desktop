@@ -25,6 +25,13 @@ namespace IO2021_Desktop
         public MainPage()
         {
             this.InitializeComponent();
+            async void printHelloWorldButton_Click(object sender, RoutedEventArgs e)
+            {
+                ContentDialog helloWorld = new ContentDialog
+                {
+                    Content = "Hello world!";
+                }
+            }
         }
     }
 }

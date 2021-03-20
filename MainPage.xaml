@@ -9,7 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBox Text="Hello World!" TextWrapping="Wrap" FontSize="200px"/>
+        <TextBox Text="Hello World!" TextWrapping="Wrap" FontSize="150x"/>
+        <Button Content="Print Hello World" Margin="126,0,0,483" VerticalAlignment="Bottom" RenderTransformOrigin="-0.685,0.673" Height="230" Width="430"/>
 
 
     </Grid>
