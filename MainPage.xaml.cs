@@ -35,7 +35,11 @@ namespace IO2021_Desktop
             {
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri("https://www.haveibeenpwned.com/");
-                client.GetAsync();
+                CompromisedAccount api_results = client.GetAsync("api/v3/");
+                client.DefaultRequestHeaders.Add("hibp-api-key", "17dc6675863c4f3da9850646f98b3b84");
+                client.DefaultRequestHeaders.Add("user-agent", "Explosive Security API Call");
+                Console.WriteLine(api_results);
+                return api_results;
             }
             ContentDialog scanResult = new ContentDialog
             {
@@ -50,5 +54,7 @@ namespace IO2021_Desktop
     {
         public string email;
         public string breach;
+        public string[] compromised_data;
+        public int date;
     }
 }
