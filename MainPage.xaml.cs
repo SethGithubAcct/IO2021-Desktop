@@ -28,9 +28,7 @@ namespace IO2021_Desktop
             async void printHelloWorldButton_Click(object sender, RoutedEventArgs e)
             {
                 ContentDialog helloWorld = new ContentDialog
-                {
-                    Content = "Hello world!";
-                }
+                { Content = "Hello world!" };
             }
         }
     }
