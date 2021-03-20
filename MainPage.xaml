@@ -9,9 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBox Text="Hello World!" TextWrapping="Wrap" FontSize="125x"/>
-        <Button Content="Print Hello World" Margin="0,501,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.685,0.673" Height="108" Width="170" Click="HelloWorld_Click" HorizontalAlignment="Center"/>
-
-
+        <TextBox Text="Explosive Security" TextWrapping="Wrap" FontSize="125px"/>
+        <Button Content="Scan Now" Margin="140,0,0,0" Click="Scan_Click"/>
     </Grid>
 </Page>

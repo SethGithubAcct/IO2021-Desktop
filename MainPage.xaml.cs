@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace IO2021_Desktop
@@ -25,7 +26,6 @@ namespace IO2021_Desktop
         public MainPage()
         {
             this.InitializeComponent();
-
         }
         async void HelloWorld_Click(object sender, RoutedEventArgs e)
         {
@@ -36,6 +36,16 @@ namespace IO2021_Desktop
                 CloseButtonText = "Exit"
             };
             ContentDialogResult result = await helloWorld.ShowAsync();
+        }
+        async void Scan_Click(object sender, RoutedEventArgs e)
+        {
+            ContentDialog scanResult = new ContentDialog
+            {
+                Title = "Scan Results",
+                Content = "May God have mercy on your email account",
+                CloseButtonText = "Ok"
+            };
+            ContentDialogResult result = await scanResult.ShowAsync();
         }
     }
 }
