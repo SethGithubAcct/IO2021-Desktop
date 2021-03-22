@@ -9,9 +9,17 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock Text="Scan results" TextWrapping="Wrap" FontSize="75px"/>
-        <TextBox Text="Enter email..." TextWrapping="Wrap" Margin="0,165,0,-165" FontSize="25px"/>
-        <Button Content="Search" Margin="10,267,0,0" VerticalAlignment="Top" Click="Search_Click"/>
-        <TextBlock Text="Your account was found in 2 breaches!" TextWrapping="Wrap" FontSize="25px" Margin="10,360,115,-235"/>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="607*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Scan Parameters" TextWrapping="Wrap" FontSize="75px" SelectionChanged="TextBlock_SelectionChanged" Grid.ColumnSpan="2"/>
+        <TextBlock Text="Data breach scan (powered by HaveIBeenPwned API)" TextWrapping="Wrap" Grid.ColumnSpan="2" Margin="10,126,628,547" FontSize="25px"/>
+        <TextBox Text="" TextWrapping="Wrap" Margin="0,165,910,860" FontSize="25px" Grid.ColumnSpan="2" PlaceholderText="Enter email..." RenderTransformOrigin="0.186,0.501"/>
+        <Button Content="Search" Margin="10,267,0,0" VerticalAlignment="Top" Click="Search_Click" Grid.ColumnSpan="2" RenderTransformOrigin="0.564,-0.54"/>
     </Grid>
 </Page>

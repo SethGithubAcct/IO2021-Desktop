@@ -31,7 +31,7 @@ namespace IO2021_Desktop
         }
         async void Search_Click(object sender, RoutedEventArgs e)
         {
-            async Task<List<CompromisedAccount>> APICall()
+           async Task<List<CompromisedAccount>> APICall()
             {
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri("https://www.haveibeenpwned.com/");
@@ -49,10 +49,11 @@ namespace IO2021_Desktop
                 return compromised;
             }
             var res = await APICall();
+        }
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
 
         }
-        CompromisedAccount api_results = null;
-       
     }
     public class CompromisedAccount
     {
